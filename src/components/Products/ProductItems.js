@@ -1,11 +1,9 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { addToCart } from '../../redux/actions'
 
 const ProductItems = ({product}) => {
-    const cartItems=useSelector(state=>state.cart)
     const dispatch=useDispatch()
-    console.log(cartItems)
     const handleClick=()=>{
         dispatch(addToCart(product.id))
     }

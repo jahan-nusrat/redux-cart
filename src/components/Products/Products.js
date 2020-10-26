@@ -6,9 +6,9 @@ import './product.style.css'
 
 const Products = () => {
     return (
-        <div>
+        <div className="products-section ">
             <Nav />
-            <main className="container products-section mt-5">
+            <main className="container products-details">
                 <div className="row">
                     {
                         data.map(product =>{

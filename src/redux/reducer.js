@@ -6,7 +6,7 @@ const products=data.map(item=>{
 })
 
 const initialState={
-    items:[products],
+    items:products,
     cart:[],
 }
 
@@ -14,7 +14,7 @@ const reducer =(state=initialState,action)=>{
     console.log(state)
     switch(action.type){
         case ADD_CART:
-            const product=state.items[0].find(item=>item.id===action.payload.id)
+            const product=state.items.find(item=>item.id===action.payload.id)
             const alreadyInCart= state.cart.find(item=>item.id===action.payload.id? true: false)
             return{
                 ...state,
