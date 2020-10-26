@@ -8,6 +8,7 @@ import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
 import Products from './components/Products/Products';
 import './App.css';
+import Checkout from './components/Checkout/Checkout';
 
 const App = () => {
     return (
@@ -21,6 +22,9 @@ const App = () => {
                 </Route>
                 <Route path="/login">
                     <Login />
+                </Route>
+                <Route path="/checkout">
+                    <Checkout />
                 </Route>
             </Switch>
         </Router>
