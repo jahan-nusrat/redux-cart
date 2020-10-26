@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import CartItems from './CartItems';
 import './cart.style.css'
 import Nav from '../Navbar.js/Nav';
 import { useEffect } from 'react';
+import { amountInfo } from '../../redux/actions';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
+    const amountDetails=useSelector(state => state.amount)
+    console.log(amountDetails)
     const cartItems=useSelector(state=>state.cart)
     const [totalAmount,setTotalAmount]= useState(0)
     const [totalQty,setTotalQty]= useState(0)
+    const dispatch=useDispatch()
 
     useEffect(()=>{
         let price= cartItems.reduce((acc,current)=>{
@@ -19,7 +24,8 @@ const Cart = () => {
         },0)
         setTotalAmount(price)
         setTotalQty(qty)
-    },[cartItems,totalAmount,totalQty])
+        dispatch(amountInfo(price,qty))
+    },[cartItems,totalAmount,totalQty,setTotalAmount,setTotalQty])
 
     return (
         <section className="container">
@@ -39,7 +45,9 @@ const Cart = () => {
                                 <h4 className="total-amount pt-3">Total Amount: <strong>${totalAmount.toFixed(2)}</strong> </h4>
                             </div>
                         </div>
-                        <button className="btn cart-btn mt-4">Proceed to checkout</button>
+                        <Link to="/checkout">
+                            <button className="btn cart-btn mt-4">Proceed to checkout</button>
+                        </Link>
                     </div>
                 </div>
             </div>

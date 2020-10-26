@@ -9,7 +9,7 @@ const Checkout = () => {
             <div className="row justify-content-center">
                 <div className="col-md-6">
                     <form onSubmit={handleForm}>
-                    <h4>Edit Delivery Details</h4>
+                    <h4>Delivery Details</h4>
                     <hr />
                     <div className="form-group">
                         <input
@@ -57,8 +57,8 @@ const Checkout = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="btn btn-save">
-                        Save & Continue
+                    <button type="submit" className="btn btn-save text-center">
+                        Place Your Order
                     </button>
                 </form>
                 </div>

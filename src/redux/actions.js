@@ -1,6 +1,7 @@
 export const ADD_CART= 'ADD_CART';
 export const REMOVE_CART= 'REMOVE_CART';
 export const QTY_CART= 'QTY_CART';
+export const AMOUNT_INFO= 'AMOUNT_INFO'
 
 export const addToCart=(id)=>{
     return{
@@ -27,5 +28,12 @@ export const cartQty=(id, value)=>{
             id,
             qty: value
         }
+    }
+}
+
+export const amountInfo=(amount, items)=>{
+    return{
+        type: AMOUNT_INFO,
+        payload:{amount, items}
     }
 }

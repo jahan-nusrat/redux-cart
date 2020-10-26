@@ -9,11 +9,11 @@ const CartItems = ({item}) => {
     const handleRemoveItem=()=>{
         dispatch(removeFromCart(item.id))
     }
-
     const handleInputChange=(e)=>{
         setQuantity(e.target.value)
         dispatch(cartQty(item.id, e.target.value))
     }
+    
 
     return (
         <div className="col-lg-8 mb-3">
