@@ -25,13 +25,15 @@ const reducer =(state=initialState,action)=>{
         case REMOVE_CART:
             const remainingItems= [...state.cart].filter(item=>item.id !== action.payload.id)
             return{
-                cart:[...remainingItems]
+                cart:[...remainingItems],
+                items:products
             }
 
         case QTY_CART:
-            const adjustQuantity= state.cart.map(item=>item.id===action.payload.id? {...item, qty:action.payload.qty}: item)
+            const adjustQuantity= state.cart.map(item=>item.id===action.payload.id? {...item, qty:parseInt(action.payload.qty)}: item)
             return{
-                cart: [...adjustQuantity]
+                cart: [...adjustQuantity],
+                items:products
             }
 
         default:
