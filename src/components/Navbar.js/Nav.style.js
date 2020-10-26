@@ -13,7 +13,7 @@ export const NavComponent=styled.nav`
     }
     .cart{
         background-color:#ffffff;
-        padding:0.3rem 3rem;
+        padding:0.3rem 1.2rem;
         border-radius:5px;
         .nav-cart{
             .icon-cart{

@@ -1,6 +1,14 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart } from '../../redux/actions'
 
 const ProductItems = ({product}) => {
+    const cartItems=useSelector(state=>state.cart)
+    const dispatch=useDispatch()
+    console.log(cartItems)
+    const handleClick=()=>{
+        dispatch(addToCart(product.id))
+    }
     return (
         <div className="col-md-4 text-center mb-4">
             <div className="product-card">
@@ -11,7 +19,7 @@ const ProductItems = ({product}) => {
                 <div className="product-price">
                     <h4>Price: ${product.price}</h4>
                 </div>
-                <button className="btn cart-btn my-3">Add to Cart</button>
+                <button className="btn cart-btn my-3" onClick={handleClick}>Add to Cart</button>
             </div>
         </div>
     )
