@@ -27,7 +27,7 @@ const FormValidation = (user)=>{
 
     //Password Validation
     const passwordRegex =/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-    if(!user.password){
+    if(!user.password.trim()){
         error.password= "Password Required"
     } else if(!passwordRegex.test(user.password)){
         error.password="password need to be between 7 to 15 characters which contain at least one numeric digit and a special character"

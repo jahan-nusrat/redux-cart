@@ -1,16 +1,17 @@
 import React from 'react';
-import useForm from './useForm'
+import useForm from './useForm';
+import validation from './FormValidation';
 
 const FormSignUp = () => {
-    const {handleSubmit, user, handleInputChange} =useForm()
+    const {handleSubmit, user, handleInputChange, error} =useForm(validation);
     
     return (
-        <div className="container">
+        <div className="container signup">
             <div className="row justify-content-center">
                 <div className="col-lg-6">
                     <form className="form row" onSubmit={handleSubmit}>
-                        <h4>Create a new account</h4>
-                        <div className="form-group col-md-10">
+                        <h4 style={{padding:'0 15px'}} className="mb-4">Login Form</h4>
+                        <div className="form-group col-md-12">
                             <label htmlFor="name">Name</label>
 							<input
 								type="text"
@@ -19,10 +20,10 @@ const FormSignUp = () => {
                                 value={user.name}
                                 onChange={handleInputChange}
 								placeholder="Enter Your Name"
-								required
-							/>
+                            />
+                            {error.name && <p className="error">{error.name}</p>}
                         </div>
-                        <div className="form-group col-md-10">
+                        <div className="form-group col-md-12">
                             <label htmlFor="Email">Email</label>
 							<input
 								type="email"
@@ -31,10 +32,10 @@ const FormSignUp = () => {
                                 value={user.email}
                                 onChange={handleInputChange}
 								placeholder="Email"
-								required
-							/>
+                            />
+                            {error.email ? <p className="error">{error.email}</p>:''}
                         </div>
-                        <div className="form-group col-md-10">
+                        <div className="form-group col-md-12">
                             <label htmlFor="Phone Number">Phone Number</label>
 							<input
 								type="number"
@@ -43,10 +44,10 @@ const FormSignUp = () => {
                                 value={user.number}
                                 onChange={handleInputChange}
 								placeholder="Phone Number"
-								required
-							/>
+                            />
+                            {error.number && <p className="error">{error.number}</p>}
                         </div>
-                        <div className="form-group col-md-10">
+                        <div className="form-group col-md-12">
                             <label htmlFor="Password">Password</label>
 							<input
 								type="password"
@@ -55,15 +56,13 @@ const FormSignUp = () => {
                                 onChange={handleInputChange}
 								className="form-control"
 								placeholder="password"
-								required
-							/>
+                            />
+                            {error.password && <p className="error">{error.password}</p>}
                         </div>
-                        <button type="submit" className="btn btn-primary login col-9">Login</button>
-                        <span>Already Have an Account? Login Here</span>
+                        <button type="submit" className="btn btn-primary login">Login</button>
                     </form>
                 </div>
             </div>
-            
         </div>
     )
 }

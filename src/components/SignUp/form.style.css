@@ -1,0 +1,40 @@
+.signup-section {
+    position: relative;
+    height: 100vh;
+}
+
+.signup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+    border: 1px solid #d5d5d5;
+    padding: 1.4rem 1rem;
+    background-color: #ebebeb;
+    border-radius: 8px;
+}
+
+.form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form button {
+    width: 100%;
+    margin: 1rem 15px;
+}
+
+.form .form-group {
+    margin-bottom: 0.6rem;
+}
+
+.error {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #EE4436;
+    margin-bottom: 0;
+    padding-top: 0.4rem;
+}

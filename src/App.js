@@ -10,6 +10,7 @@ import './App.css';
 import Checkout from './components/Checkout/Checkout';
 import SuccessOrder from './components/Success/SuccessOrder';
 import SignUp from './components/SignUp/SignUp';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const App = () => {
     return (
@@ -18,12 +19,12 @@ const App = () => {
                 <Route exact path="/">
                     <Products />
                 </Route>
-                <Route path="/cart">
-                    <Cart />
-                </Route>
                 <Route path="/login">
                     <SignUp />
                 </Route>
+                <PrivateRoute path="/cart">
+                    <Cart />
+                </PrivateRoute>
                 <Route path="/checkout">
                     <Checkout />
                 </Route>
