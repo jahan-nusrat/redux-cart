@@ -1,4 +1,4 @@
-import {ADD_CART, AMOUNT_INFO, LOGIN_INFO, QTY_CART, REMOVE_CART } from './actions'
+import {ADD_CART, AMOUNT_INFO, DELIVERY_DETAILS, LOGIN_INFO, QTY_CART, REMOVE_CART } from './actions'
 import data from '../components/data/data';
 
 const products=data.map(item=>{
@@ -9,7 +9,8 @@ const initialState={
     items:products,
     cart:[],
     amount:{},
-    userInfo:{}
+    userInfo:{},
+    delivery:{}
 }
 
 const reducer =(state=initialState,action)=>{
@@ -48,6 +49,11 @@ const reducer =(state=initialState,action)=>{
             return{
                 ...state,
                 userInfo:action.payload
+            }
+        case DELIVERY_DETAILS:
+            return{
+                ...state,
+                delivery: action.payload
             }
 
         default:

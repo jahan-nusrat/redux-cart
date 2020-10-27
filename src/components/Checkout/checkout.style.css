@@ -7,3 +7,13 @@
     width: 100%;
     text-transform: uppercase;
 }
+
+.order-history h4 {
+    color: #00b109;
+    margin-top: 1rem;
+}
+
+.order-history {
+    border: 1px solid #d5d5d5;
+    padding: 1rem;
+}

@@ -8,6 +8,7 @@ import { amountInfo } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
+    const userDetails=useSelector(state =>state.userInfo)
     const amountDetails=useSelector(state => state.amount)
     console.log(amountDetails)
     const cartItems=useSelector(state=>state.cart)
@@ -50,6 +51,14 @@ const Cart = () => {
                         </Link>
                     </div>
                 </div>
+                {
+                    userDetails.email && <div className="col-lg-3 user-section">
+                        <h3>Your Details</h3>
+                        <p>Name: <strong>{userDetails.name}</strong> </p>
+                        <p>Email: <strong>{userDetails.email}</strong> </p>
+                        <p>Phone: <strong>{userDetails.number}</strong> </p>
+                    </div>
+                }
             </div>
         </section>
     )
