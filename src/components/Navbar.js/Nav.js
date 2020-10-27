@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const Nav = () => {
+    const userDetails=useSelector(state=>state.userInfo)
     const cartItems=useSelector(state=>state.cart)
     const [count,setCount] =useState(0)
     useEffect(()=>{
@@ -22,6 +23,9 @@ const Nav = () => {
             <Link to="/">
                 <img src={logo} alt="logo" className="img-fluid nav-logo"/>
             </Link>
+                {
+                    userDetails.email? <h4 style={{color:'#ffffff'}}>{userDetails.name}</h4> : <Link to="/login" style={{color:'#000000', backgroundColor:'#ffffff'}} className="px-3 py-1 rounded">Login</Link>
+                }
             <Link to="/cart" className="d-flex align-items-center cart">
                 <div className="nav-cart mr-2">
                     <FaShoppingCart className="icon-cart" />

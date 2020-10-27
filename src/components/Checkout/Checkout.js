@@ -65,7 +65,7 @@ const Checkout = () => {
                     </div>
                     <Link to="/success">
                         <button type="submit" className="btn btn-save text-center">
-                            Place Your Order
+                            Confirm Your Order
                         </button>
                     </Link>
                 </form>

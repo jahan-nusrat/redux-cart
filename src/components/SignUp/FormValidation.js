@@ -6,7 +6,7 @@ const FormValidation = (user)=>{
     if(!user.name.trim()){
         error.name="Username Required"
     } else if(!nameRegex.test(user.name)){
-        error.name="Please input alphabet characters only"
+        error.name="Please input alphabet characters only and there can be no space"
     }
 
     //Email Validation
