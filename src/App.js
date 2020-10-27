@@ -5,10 +5,11 @@ import {
     Route
   } from "react-router-dom";
 import Cart from './components/Cart/Cart';
-import Login from './components/Login/Login';
 import Products from './components/Products/Products';
 import './App.css';
 import Checkout from './components/Checkout/Checkout';
+import SuccessOrder from './components/Success/SuccessOrder';
+import SignUp from './components/SignUp/SignUp';
 
 const App = () => {
     return (
@@ -21,10 +22,13 @@ const App = () => {
                     <Cart />
                 </Route>
                 <Route path="/login">
-                    <Login />
+                    <SignUp />
                 </Route>
                 <Route path="/checkout">
                     <Checkout />
+                </Route>
+                <Route path="/success">
+                    <SuccessOrder />
                 </Route>
             </Switch>
         </Router>

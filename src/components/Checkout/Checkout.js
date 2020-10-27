@@ -1,12 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import Nav from '../Navbar.js/Nav';
+import Order from '../Order/Order';
+import './checkout.style.css'
 
 const Checkout = () => {
     const handleForm =(e)=>{
         e.preventDefault();
     }
+    
     return (
         <div className="container">
-            <div className="row justify-content-center">
+            <Nav />
+            <div className="row justify-content-between checkout-section">
                 <div className="col-md-6">
                     <form onSubmit={handleForm}>
                     <h4>Delivery Details</h4>
@@ -57,10 +63,15 @@ const Checkout = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="btn btn-save text-center">
-                        Place Your Order
-                    </button>
+                    <Link to="/success">
+                        <button type="submit" className="btn btn-save text-center">
+                            Place Your Order
+                        </button>
+                    </Link>
                 </form>
+                </div>
+                <div className="col-md-4">
+                    <Order />
                 </div>
             </div>
         </div>
