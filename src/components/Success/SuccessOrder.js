@@ -16,7 +16,7 @@ const SuccessOrder = () => {
     return (
         <section className="success container">
             <div className="row justify-content-center">
-                <div className="col-7 delivery-details">
+                <div className="col-lg-7 col-md-8 col-10 delivery-details">
                     <h3>You have successfully placed your order</h3>
                     <h4 style={{color: 'red'}} className="mt-3">Deliver Items To: </h4>
                     <p>Type of delivery: {deliveryInfo.type}</p>

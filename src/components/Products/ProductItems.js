@@ -8,11 +8,11 @@ const ProductItems = ({product}) => {
         dispatch(addToCart(product.id))
     }
     return (
-        <div className="col-md-4 text-center mb-4">
+        <div className="col-lg-4 col-md-6 col-sm-8 col-12 text-center mb-4">
             <div className="product-card">
                 <img src={product.img} alt={product.key} className="img-fluid"/>
                 <div className="product-name mt-3">
-                    <h5>{product.name.slice(0,60)}...</h5>
+                    <h5>{product.name.slice(0,50)}...</h5>
                 </div>
                 <div className="product-price">
                     <h4>Price: ${product.price}</h4>

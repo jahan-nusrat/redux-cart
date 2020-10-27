@@ -36,7 +36,7 @@ const Checkout = () => {
         <div className="container">
             <Nav />
             <div className="row justify-content-between checkout-section">
-                <div className="col-md-6">
+                <div className="col-md-6 col-sm-10 col-11 mb-4">
                     <form onSubmit={handleForm}>
                     <h4>Delivery Details</h4>
                     <hr />
@@ -99,7 +99,7 @@ const Checkout = () => {
                         </button>
                 </form>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 col-sm-6 col-8">
                     <Order />
                 </div>
             </div>

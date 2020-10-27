@@ -9,7 +9,7 @@ const Products = () => {
         <div className="products-section ">
             <Nav />
             <main className="container products-details">
-                <div className="row">
+                <div className="row justify-content-center">
                     {
                         data.map(product =>{
                             return <ProductItems key={product.key} product={product} />

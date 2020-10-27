@@ -37,7 +37,7 @@ const Cart = () => {
                         return <CartItems key={item.id} item={item} />
                     })
                 }
-                <div className="col-lg-3 cart-summary-section">
+                <div className="col-lg-3 col-md-3 col-7 cart-summary-section">
                     <div className="cart-summary">
                         <div className="cart-summary-title">
                             <h3>Cart Summary</h3>
@@ -52,7 +52,7 @@ const Cart = () => {
                     </div>
                 </div>
                 {
-                    userDetails.email && <div className="col-lg-3 user-section">
+                    userDetails.email && <div className="col-lg-3 col-md-3 col-7 user-section">
                         <h3>Your Details</h3>
                         <p>Name: <strong>{userDetails.name}</strong> </p>
                         <p>Email: <strong>{userDetails.email}</strong> </p>

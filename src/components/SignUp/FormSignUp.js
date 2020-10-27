@@ -8,10 +8,10 @@ const FormSignUp = () => {
     return (
         <div className="container signup">
             <div className="row justify-content-center">
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-md-8 col-sm-8 col-12">
                     <form className="form row" onSubmit={handleSubmit}>
                         <h4 style={{padding:'0 15px'}} className="mb-4">Login Form</h4>
-                        <div className="form-group col-md-12">
+                        <div className="form-group col-12">
                             <label htmlFor="name">Name</label>
 							<input
 								type="text"
@@ -23,7 +23,7 @@ const FormSignUp = () => {
                             />
                             {error.name && <p className="error">{error.name}</p>}
                         </div>
-                        <div className="form-group col-md-12">
+                        <div className="form-group col-12">
                             <label htmlFor="Email">Email</label>
 							<input
 								type="email"
@@ -35,7 +35,7 @@ const FormSignUp = () => {
                             />
                             {error.email ? <p className="error">{error.email}</p>:''}
                         </div>
-                        <div className="form-group col-md-12">
+                        <div className="form-group col-12">
                             <label htmlFor="Phone Number">Phone Number</label>
 							<input
 								type="number"
@@ -47,7 +47,7 @@ const FormSignUp = () => {
                             />
                             {error.number && <p className="error">{error.number}</p>}
                         </div>
-                        <div className="form-group col-md-12">
+                        <div className="form-group col-12">
                             <label htmlFor="Password">Password</label>
 							<input
 								type="password"

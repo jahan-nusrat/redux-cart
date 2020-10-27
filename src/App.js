@@ -11,6 +11,7 @@ import Checkout from './components/Checkout/Checkout';
 import SuccessOrder from './components/Success/SuccessOrder';
 import SignUp from './components/SignUp/SignUp';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 const App = () => {
     return (
@@ -30,6 +31,9 @@ const App = () => {
                 </Route>
                 <Route path="/success">
                     <SuccessOrder />
+                </Route>
+                <Route path="*">
+                    <NotFound />
                 </Route>
             </Switch>
         </Router>

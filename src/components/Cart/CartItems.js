@@ -16,7 +16,7 @@ const CartItems = ({item}) => {
     
 
     return (
-        <div className="col-lg-8 mb-3">
+        <div className="col-lg-8 col-md-9 col-11 mb-3">
             <div className="single-product d-flex">
                 <div className="single-product-img">
                     <img src={item.img} alt={item.name} className="img-fluid"/>
