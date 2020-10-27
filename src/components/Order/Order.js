@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux'
 
 const Order = () => {
     const orderAmount=useSelector(state=>state.amount)
-    console.log(orderAmount)
     const [totalAmount,setTotalAmount]= useState(0)
     const [item, setItem]= useState(0)
     useEffect(()=>{

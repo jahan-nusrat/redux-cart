@@ -14,7 +14,6 @@ const initialState={
 }
 
 const reducer =(state=initialState,action)=>{
-    console.log(state)
     switch(action.type){
         case ADD_CART:
             const product=state.items.find(item=>item.id===action.payload.id)

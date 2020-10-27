@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom';
 const Cart = () => {
     const userDetails=useSelector(state =>state.userInfo)
     const amountDetails=useSelector(state => state.amount)
-    console.log(amountDetails)
     const cartItems=useSelector(state=>state.cart)
     const [totalAmount,setTotalAmount]= useState(0)
     const [totalQty,setTotalQty]= useState(0)
